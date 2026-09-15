@@ -19,7 +19,7 @@ export const primaryNav = [
   { label: 'News', href: '/news' },
   { label: 'Events', href: '/events' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Results', href: 'https://iwlf.in', external: true },
+  { label: 'Results', href: '/results' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -133,6 +133,52 @@ export const events: EventItem[] = [
   },
 ]
 
+export type AthleteRanking = {
+  rank: number
+  athlete: string
+  category: string
+  state: string
+  total: string
+}
+
+export const athleteRankings: AthleteRanking[] = [
+  {
+    rank: 1,
+    athlete: 'Mirabai Chanu',
+    category: 'Women 48 kg',
+    state: 'Manipur',
+    total: '199 kg',
+  },
+  {
+    rank: 2,
+    athlete: 'Bindyarani Devi',
+    category: 'Women 55 kg',
+    state: 'Manipur',
+    total: '202 kg',
+  },
+  {
+    rank: 3,
+    athlete: 'Harjinder Kaur',
+    category: 'Women 71 kg',
+    state: 'Punjab',
+    total: '227 kg',
+  },
+  {
+    rank: 4,
+    athlete: 'Achinta Sheuli',
+    category: 'Men 73 kg',
+    state: 'West Bengal',
+    total: '313 kg',
+  },
+  {
+    rank: 5,
+    athlete: 'Jeremy Lalrinnunga',
+    category: 'Men 67 kg',
+    state: 'Mizoram',
+    total: '300 kg',
+  },
+]
+
 export type GalleryImage = {
   src: string
   alt: string
@@ -175,6 +221,7 @@ export const mainMenu = [
   { label: 'News', href: '/news' },
   { label: 'Events', href: '/events' },
   { label: 'Gallery', href: '/gallery' },
+  { label: 'Results', href: '/results' },
   { label: 'Contact', href: '/contact' },
 ]
 
