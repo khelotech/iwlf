@@ -90,14 +90,12 @@ export function SiteHeader() {
                 </Link>
               ),
             )}
-            <a
-              href="https://iwlf.in/athletes/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/login"
               className="ml-2 rounded-full border-2 border-white px-5 py-1.5 text-sm font-bold uppercase tracking-wide transition-colors hover:bg-white hover:text-brand-primary"
             >
               Sign In
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -151,14 +149,13 @@ export function SiteHeader() {
                 </li>
               ))}
             </ul>
-            <a
-              href="https://iwlf.in/athletes/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/login"
+              onClick={() => setOpen(false)}
               className="mt-1 block rounded-full border-2 border-white px-5 py-2 text-center text-sm font-bold uppercase tracking-wide"
             >
               Sign In
-            </a>
+            </Link>
           </nav>
         )}
       </div>
