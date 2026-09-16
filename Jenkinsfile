@@ -43,21 +43,21 @@ pipeline {
         }
 
 
-        // stage('Create .env File') {
-        //     steps {
-        //         withCredentials([file(credentialsId: 'indian_weightlifting_federation', variable: 'SECRET_ENV_FILE')]) {
-        //             sh '''
-        //                 echo "Removing old .env..."
-        //                 rm -f .env
+        stage('Create .env File') {
+            steps {
+                withCredentials([file(credentialsId: 'indian_weightlifting_federation_env', variable: 'SECRET_ENV_FILE')]) {
+                    sh '''
+                        echo "Removing old .env..."
+                        rm -f .env
 
-        //                 echo "Creating new .env..."
-        //                 cat "$SECRET_ENV_FILE" > .env
+                        echo "Creating new .env..."
+                        cat "$SECRET_ENV_FILE" > .env
 
-        //                 chmod 600 .env
-        //             '''
-        //         }
-        //     }
-        // }
+                        chmod 600 .env
+                    '''
+                }
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
